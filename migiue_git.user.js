@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        gist_title
+// @name        gist_migiue
 // @namespace   gist
 // @include     http://gist.github.com/*
 // @include     https://gist.github.com/*
@@ -7,6 +7,8 @@
 // ==/UserScript==
 
 (function(){ 
+    var WARNING_TEXT = "この右上はドワンゴ社内じゃありません！";
+
     var migiuetext = document.createElement("div");
     migiuetext.style.background = "transparent url(http://uni.res.nimg.jp/img/icon/icon_tv_ani.gif) no-repeat scroll left bottom";
     migiuetext.style.paddingLeft = "30px";
@@ -20,7 +22,7 @@
     migiue.style.height = "41px";
     migiue.style.lineHeight = "41px";
     migiue.style.background = "transparent url(http://uni.res.nimg.jp/img/sprite_migiue.png) no-repeat scroll left bottom";
-    migiue.innerHTML = "この右上はドワンゴ社内じゃありません！";
+    migiue.innerHTML = WARNING_TEXT;
     migiuetext.appendChild(migiue);
     
     document.getElementById("header").appendChild(migiuetext);
